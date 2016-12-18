@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>隐式控制器测试</title>
-    </head>
-    <body>
+
+        @include('test.header') ====================引入html文件<br/>
+        
         
         <form action="/tt/sub1" method="POST" name="form" enctype="multipart/form-data">
             name:<input type="text" name="user" id="user" value="{{$arr[0]['a']}}" /><br/>
@@ -22,15 +19,18 @@
         
         
         
+        @if($user < 999)
+            < 999
+        @else
+            > 999
+        @endif
         
-        @include('test.header')
-        <!--
-        <table>
+        
+        <div>
             @foreach( $arr as $key => $val)
-            {{$key}}==={{$val}}<br/>
+            {{$key}}==={{ $val['a'] }}<br/>
             @endforeach
-        </table>-->
-            
+        </div>
         
         
     </body>
