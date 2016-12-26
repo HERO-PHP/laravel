@@ -20,7 +20,12 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        
+        "files": [
+            "app/Test/Test.php"
+        ]
+        
     },
     "autoload-dev": {
         "classmap": [

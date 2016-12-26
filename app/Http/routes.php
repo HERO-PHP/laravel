@@ -11,6 +11,11 @@
 |
 */
 
+//打印sql
+Event::listen('illuminate.query', function($query){
+ var_dump($query);   
+});
+
 Route::group([],function(){//组
 
     Route::get('/', function () {
@@ -94,4 +99,6 @@ Route::group([],function(){//组
     Route::post('/flash_value','TestController@flashValue');
     Route::get('/getflash','TestController@getFlash');
     
+    //数据库操作
+    Route::controller('sql', 'SqlController');
 });
